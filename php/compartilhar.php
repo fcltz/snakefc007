@@ -22,6 +22,33 @@ if ($user_id === null) {
     die('Erro: ID do usuário não encontrado.');
 }
 
+// Obter saldo do usuário e dados de indicação
+$query = $conn->prepare("SELECT balance, referral_amount FROM users WHERE id = ?");
+$query->bind_param("i", $user_id);
+$query->execute();
+$result = $query->get_result();
+$user_data = $result->fetch_assoc();
+
+$balance = $user_data['balance'] ?? 0.00;
+$referral_amount = $user_data['referral_amount'] ?? 0.00;
+
+// Obter dados de usuários convidados
+$query = $conn->prepare("SELECT u.username, r.status, r.referral_amount, r.final_referral_amount FROM referrals r JOIN users u ON r.referred_user_id = u.id WHERE r.user_id = ?");
+$query->bind_param("i", $user_id);
+$query->execute();
+$result = $query->get_result();
+$referrals = [];
+while ($row = $result->fetch_assoc()) {
+    $referrals[] = $row;
+}
+
+// Obter a comissão mínima
+$userCommission = getUserCommission($user_id);
+$minCommission = $userCommission ?? getGlobalSetting('commission_value') ?? 0.00;
+
+// Calcular o valor final da comissão
+$finalCommission = array_sum(array_column($referrals, 'final_referral_amount')) ?? 0.00;
+?>
 
 <!DOCTYPE html>
 <html lang="en">
