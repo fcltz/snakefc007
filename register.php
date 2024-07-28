@@ -205,7 +205,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a class="communA rapm" href="">HOME</a>
         <a class="communA" href="">COMO JOGAR?</a>
         <a class="communA" href="/register_handler.php">CADASTRAR</a>
-        <a class="communB rige" href="https://34.172.58.22:666/">LOGIN</a>
+        <a class="communB rige" href="https://34.172.58.22/">LOGIN</a>
     </div>
     <div class="loginContainer">
         <div class="logo"><img src="images/Logotipo_SnakeBet.svg" alt=""></div>
