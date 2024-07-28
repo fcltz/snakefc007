@@ -410,7 +410,7 @@ if (isset($_GET['winGame'])) {
  <script>
     console.log('Script iniciado');
 
-    const socket = io('https://cobrasnake.click:5020');
+    const socket = io('https://vitorsant.tech:5020');
     console.log('Socket.io iniciado');
 
     document.getElementById('betForm').addEventListener('submit', function (e) {
@@ -431,7 +431,7 @@ if (isset($_GET['winGame'])) {
             if (data.status === 'ok') {
                 const userName = data.userName;
                 console.log('Jogo iniciado com sucesso, redirecionando para game.php');
-                window.location.href = `https://cobrasnake.click/views/game.php?bet=${betValue}&userName=${userName}&sessionToken=${sessionToken}`;
+                window.location.href = `https://vitorsant.tech/views/game.php?bet=${betValue}&userName=${userName}&sessionToken=${sessionToken}`;
             } else {
                 console.error('Erro ao iniciar o jogo:', data.message);
                 alert('Erro ao iniciar o jogo: ' + data.message);
