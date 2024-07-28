@@ -252,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="sidebar-title">
             <div class="sidebar-brand">
                 <div><img src="../../images/Logotipo_SnakeBet.svg" alt=""></div>
-                <div class="welcospa"><span>Seja muito bem vindo(a) ao SnakeBet.io</span></div>
+                <div class="welcospa"><span>Seja muito bem vindo(a) ao SnakeBet</span></div>
             </div>
             <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
