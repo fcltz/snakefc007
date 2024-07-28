@@ -1,6 +1,7 @@
 <?php
 session_start();
-include './php/db.php';
+include '../php/db.php';
+include '../php/functions.php';
 
 // Verificar se o usuário está logado
 if (!isset($_SESSION['session_token'])) {
@@ -229,7 +230,7 @@ $finalCommission = array_sum(array_column($referrals, 'final_referral_amount')) 
                 <div class="informations">
                     <div class="text">Link de Compartilhamento</div>
                     <div class="inputText">
-                        <input type="text" value="https://vitorsant.tech/register.php?ref=<?php echo $user_id; ?>" id="inputField" disabled>
+                        <input type="text" value="https://cobrasnake.click/register.php?ref=<?php echo $user_id; ?>" id="inputField" disabled>
                         <button class="buttonCopiar" id="copybutton">COPIAR</button>
                         <script>
                             document.getElementById('copybutton').addEventListener('click', () => {

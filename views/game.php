@@ -196,7 +196,7 @@ $settings_json = json_encode($settings);
     const canvasHex = document.getElementById('canvasHex');
     const ctxHex = canvasHex.getContext('2d');
 
-    const socket = io('https://vitorsant.tech:5020');
+    const socket = io('https://cobrasnake.click:5020');
     console.log('Socket.io iniciado');
 
     const urlParams = new URLSearchParams(window.location.search);

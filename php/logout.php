@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("Location: https://vitorsant.tech/");
+header("Location: https://cobrasnake.click/");
 exit();
 ?>
