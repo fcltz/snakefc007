@@ -78,7 +78,7 @@ if (isset($_GET['winGame'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SnakeBet</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <link href="../css/toastify.css" rel="stylesheet">
     <link href="../css/boxicons.min.css" rel="stylesheet">
@@ -404,6 +404,14 @@ if (isset($_GET['winGame'])) {
         }
     });
 });
+</script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+ <script>
+    console.log('Script iniciado');
+
+    const socket = io('http://34.172.58.22:5020');
+    console.log('Socket.io iniciado');
 
     document.getElementById('betForm').addEventListener('submit', function (e) {
         e.preventDefault();
