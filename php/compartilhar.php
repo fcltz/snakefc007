@@ -9,6 +9,20 @@ if (!isset($_SESSION['session_token'])) {
     exit();
 }
 
+// Obter o ID do usuário a partir do token de sessão
+$session_token = $_SESSION['session_token'];
+$query = $conn->prepare("SELECT user_id FROM sessions WHERE session_token = ?");
+$query->bind_param("s", $session_token);
+$query->execute();
+$result = $query->get_result();
+$row = $result->fetch_assoc();
+
+$user_id = $row['user_id'] ?? null;
+if ($user_id === null) {
+    die('Erro: ID do usuário não encontrado.');
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
