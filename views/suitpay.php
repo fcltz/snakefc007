@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurações</title>
+    <title>Admin Panel - Configurações SuitPay</title>
     <style>
-         <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -48,7 +47,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="number"], input[type="text"], button, select {
+        input[type="number"], input[type="text"], select, button {
             margin-bottom: 20px;
             padding: 10px;
             font-size: 16px;
@@ -87,10 +86,9 @@
             margin: 5px 0;
         }
     </style>
-    </style>
 </head>
 <body>
-<div class="navbar">
+    <div class="navbar">
     <a href="admin.php">Configurações de Jogo</a>
         <a href="manage_influencers.php">Incluir Influencer</a>
         <a href="suitpay.php">Credenciais suitpay</a>
