@@ -339,7 +339,7 @@ $balance = $user_balance['balance'];
                     <form action="update_profile.php" method="post">
                         <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
                         <label for="username">
-                            *Username:
+                            *Usuário:
                             <input name="username" id="username" value="<?php echo $user_data['username']; ?>" type="text" disabled>
                         </label>
                         <label for="email">
@@ -352,7 +352,7 @@ $balance = $user_balance['balance'];
                         </label>
                         <label for="cpf">
                             *CPF:
-                            <input id="cpf" name="cpf" value="<?php echo $user_data['cpf']; ?>" type="text" disabled>
+                            <input id="cpf" name="cpf" value="<?php echo $user_data['cpf']; ?>" type="text">
                         </label>
                         <label for="name">
                             *Nome:
