@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurações</title>
     <style>
+         <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
         }
         .container {
             max-width: 800px;
@@ -31,7 +48,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="text"], button {
+        input[type="number"], input[type="text"], button, select {
             margin-bottom: 20px;
             padding: 10px;
             font-size: 16px;
@@ -47,6 +64,29 @@
         button:hover {
             background-color: #45a049;
         }
+        .explanation {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+        .settings {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .settings h2 {
+            color: #333;
+        }
+        .settings p {
+            margin: 5px 0;
+        }
+    </style>
     </style>
 </head>
 <body>
