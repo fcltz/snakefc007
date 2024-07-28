@@ -1,53 +1,13 @@
 <?php
 session_start();
-include 'db.php';
+include '../php/db.php';
+include '../php/functions.php';
 
 // Verificar se o usuário está logado
 if (!isset($_SESSION['session_token'])) {
     header("Location: ../login.php");
     exit();
 }
-
-// Obter o ID do usuário a partir do token de sessão
-$session_token = $_SESSION['session_token'];
-$query = $conn->prepare("SELECT user_id FROM sessions WHERE session_token = ?");
-$query->bind_param("s", $session_token);
-$query->execute();
-$result = $query->get_result();
-$row = $result->fetch_assoc();
-
-$user_id = $row['user_id'] ?? null;
-if ($user_id === null) {
-    die('Erro: ID do usuário não encontrado.');
-}
-
-// Obter saldo do usuário e dados de indicação
-$query = $conn->prepare("SELECT balance, referral_amount FROM users WHERE id = ?");
-$query->bind_param("i", $user_id);
-$query->execute();
-$result = $query->get_result();
-$user_data = $result->fetch_assoc();
-
-$balance = $user_data['balance'] ?? 0.00;
-$referral_amount = $user_data['referral_amount'] ?? 0.00;
-
-// Obter dados de usuários convidados
-$query = $conn->prepare("SELECT u.username, r.status, r.referral_amount, r.final_referral_amount FROM referrals r JOIN users u ON r.referred_user_id = u.id WHERE r.user_id = ?");
-$query->bind_param("i", $user_id);
-$query->execute();
-$result = $query->get_result();
-$referrals = [];
-while ($row = $result->fetch_assoc()) {
-    $referrals[] = $row;
-}
-
-// Obter a comissão mínima
-$userCommission = getUserCommission($user_id);
-$minCommission = $userCommission ?? getGlobalSetting('commission_value') ?? 0.00;
-
-// Calcular o valor final da comissão
-$finalCommission = array_sum(array_column($referrals, 'final_referral_amount')) ?? 0.00;
-?>
 
 <!DOCTYPE html>
 <html lang="en">
