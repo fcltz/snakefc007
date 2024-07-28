@@ -394,7 +394,7 @@ if (isset($_GET['winGame'])) {
             }
 
             if (data.status === 'success') {
-                alert('Aposta salva com sucesso!');
+                console.log('Aposta salva com sucesso!');
             } else {
                 alert('Erro ao salvar a aposta: ' + data.message);
             }
