@@ -410,7 +410,7 @@ if (isset($_GET['winGame'])) {
  <script>
     console.log('Script iniciado');
 
-    const socket = io('https://34.172.58.22:5020');
+    const socket = io('https://34.172.58.22:28');
     console.log('Socket.io iniciado');
 
     document.getElementById('betForm').addEventListener('submit', function (e) {
