@@ -4,7 +4,7 @@ include 'db.php';
 
 // Verificar se o usuário está logado
 if (!isset($_SESSION['session_token'])) {
-    header("Location: ../login.php");
+    header("Location: ../php/login.php");
     exit();
 }
 
@@ -16,7 +16,7 @@ $query->execute();
 $result = $query->get_result();
 
 if ($result->num_rows == 0) {
-    header("Location: ../login.php");
+    header("Location: ../php/login.php");
     exit();
 }
 
