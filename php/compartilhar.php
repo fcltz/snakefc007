@@ -230,7 +230,7 @@ $finalCommission = array_sum(array_column($referrals, 'final_referral_amount')) 
                 <div class="informations">
                     <div class="text">Link de Compartilhamento</div>
                     <div class="inputText">
-                        <input type="text" value="https://34.172.58.22/register.php?ref=<?php echo $user_id; ?>" id="inputField" disabled>
+                        <input type="text" value="http://34.172.58.22/register.php?ref=<?php echo $user_id; ?>" id="inputField" disabled>
                         <button class="buttonCopiar" id="copybutton">COPIAR</button>
                         <script>
                             document.getElementById('copybutton').addEventListener('click', () => {
