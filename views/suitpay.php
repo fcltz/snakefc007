@@ -91,7 +91,7 @@
     <div class="navbar">
     <a href="admin.php">Configurações de Jogo</a>
         <a href="manage_influencers.php">Incluir Influencer</a>
-        <a href="suitpay.php">Credenciais suitpay</a>
+        <a href="suitpay.php">Credenciais SuitPay</a>
         <a href="indicacao.php">Administração Afiliados</a>
         <a href="dashboard_afiliados.php">Dashboard Afiliados</a>
         <a href="withdrawal_requests.php">Solicitações de Saque</a>
