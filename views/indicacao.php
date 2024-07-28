@@ -155,7 +155,7 @@ $globalMinDeposit = getGlobalSetting('min_deposit') ?? 0;
 </head>
 <body>
     <div class="navbar">
-        <a href="admin.php">Configurações de Jogo</a>
+    <a href="admin.php">Configurações de Jogo</a>
         <a href="manage_influencers.php">Incluir Influencer</a>
         <a href="suitpay.php">Credenciais suitpay</a>
         <a href="indicacao.php">Administração Afiliados</a>
