@@ -404,14 +404,6 @@ if (isset($_GET['winGame'])) {
         }
     });
 });
-</script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
- <script>
-    console.log('Script iniciado');
-
-    const socket = io('http://34.172.58.22:5020');
-    console.log('Socket.io iniciado');
 
     document.getElementById('betForm').addEventListener('submit', function (e) {
         e.preventDefault();
