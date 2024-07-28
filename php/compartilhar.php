@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'db.php';
-include 'functions.php';
+include '../php/db.php';
+include '../php/functions.php';
 
 // Verificar se o usuário está logado
 if (!isset($_SESSION['session_token'])) {
