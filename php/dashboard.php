@@ -274,7 +274,7 @@ if (isset($_GET['winGame'])) {
                 <img src="../images/Financeiro.svg" alt="myprofile"> Financeiro
             </div>
         </a>
-        <a href="compartilhar.php">
+        <a href="./php/compartilhar.php">
             <div class="sidemenuTitle">
                 <img src="../images/compartilhar.png" alt="myprofile"> Compartilhar
             </div>
