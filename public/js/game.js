@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const canvasHex = document.getElementById('canvasHex');
     const ctxHex = canvasHex.getContext('2d');
 
-    const socket = io('https://34.172.58.22:20');
+    const socket = io('https://34.172.58.22:887');
     console.log('Socket.io iniciado');
 
     const urlParams = new URLSearchParams(window.location.search);
